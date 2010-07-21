@@ -1,0 +1,21 @@
+table {
+    table-layout: fixed;
+}
+
+td {
+    white-space: nowrap; 
+    overflow: hidden;
+}
+
+.term { 
+    font-weight: bold;
+    width: auto;
+}
+
+.prefix { 
+    text-align: right; 
+}
+
+.suffix { 
+    text-align: left;  
+}
