@@ -25,6 +25,9 @@ function lastNChars(n, str) {
 }
 
 function firstNChars(n, str) {
+    if(typeof(str) == 'undefined')
+        return null;
+
     var result = str.substr(0, Math.min(n, str.length));
     if(result.length < str.length) {
         result = result + "...";
@@ -34,6 +37,9 @@ function firstNChars(n, str) {
 
 function searchFinished(term) {
     return function(data, textStatus) {
+        if(typeof(data.results) == 'undefined')
+            return;
+
         var table = $('<table>');
         for(var i=0; i<data.results.length; i++) {
             var tweet = data.results[i];
