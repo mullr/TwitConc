@@ -1,16 +1,21 @@
 google.load("jquery", "1");
 
 google.setOnLoadCallback(function() {
+    var textBox = $('#term');
+    var searchButton = $('#search');
+
     var startSearch = function() {
-        search($('#term').val());
+        search(textBox.val());
     };
 
-    $('#search').click(startSearch);
+    searchButton.click(startSearch);
 
-    $('#term').keyup(function(e) {
+    textBox.keyup(function(e) {
         if(e.keyCode == 13) // enter key
             startSearch();
     });
+
+    textBox.focus();
 });
 
 function search(term) {
