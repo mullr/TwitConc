@@ -1,8 +1,15 @@
 google.load("jquery", "1");
 
 google.setOnLoadCallback(function() {
-    $('#search').click(function() {
+    var startSearch = function() {
         search($('#term').val());
+    };
+
+    $('#search').click(startSearch);
+
+    $('#term').keyup(function(e) {
+        if(e.keyCode == 13) // enter key
+            startSearch();
     });
 });
 
