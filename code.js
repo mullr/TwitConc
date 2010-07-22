@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 function search(term) {
     var url = "http://search.twitter.com/search.json";
-    var data = "q=" + term + "&rpp=25";
+    var data = "q=" + encodeURI(term) + "&rpp=25";
 
     $.ajax({
         url: url,
