@@ -1,4 +1,6 @@
-$(document).ready(function() {
+google.load("jquery", "1");
+
+google.setOnLoadCallback(function() {
     $('#search').click(function() {
         search($('#term').val());
     });
